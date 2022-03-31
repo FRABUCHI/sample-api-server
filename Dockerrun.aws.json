@@ -1,0 +1,15 @@
+
+{
+    "AWSEBDockerrunVersion":"1",
+    "Image":{
+        "Name":"prgnr173/springboot-jib:0.0.1-SNAPSHOT",
+        "Update": "true"
+    },
+
+    "Ports":[
+        {
+            "ContainerPort":8080,
+            "HostPort":8080
+        }
+    ]
+}
