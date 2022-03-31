@@ -13,8 +13,8 @@ phases:
     commands:
       - echo "=================================================================[*] Build & Dockerizing================================================================="
       - docker build -t $PROJECT_NAME .
-      - docker tag $PROJECT_NAME $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME"
-      - docker push $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME"
+      - docker tag $PROJECT_NAME $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME
+      - docker push $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME
 #   post_build:
 #     commands:
 #       - sh deploy.sh
