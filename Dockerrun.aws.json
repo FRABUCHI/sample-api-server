@@ -1,15 +1,14 @@
-
 {
     "AWSEBDockerrunVersion":"1",
     "Image":{
-        "Name":"prgnr173/springboot-jib:0.0.1-SNAPSHOT",
+        "Name":"601340144943.dkr.ecr.ap-northeast-2.amazonaws.com/sample-api-server",
         "Update": "true"
     },
 
     "Ports":[
         {
-            "ContainerPort":8080,
-            "HostPort":8080
+            "ContainerPort":3000,
+            "HostPort":80
         }
     ]
 }
