@@ -3,5 +3,10 @@
     "Image":{
         "Name":"601340144943.dkr.ecr.ap-northeast-2.amazonaws.com/sample-api-server",
         "Update": "false"
-    }
+    },
+    "Ports": [
+      {
+        "ContainerPort": 3000
+      }
+    ]
 }
