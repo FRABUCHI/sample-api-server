@@ -1,2 +1,5 @@
 node_modules
 dist
+build.yaml
+deploy.yaml
+README.md

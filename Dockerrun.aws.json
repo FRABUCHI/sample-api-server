@@ -2,13 +2,14 @@
     "AWSEBDockerrunVersion":"1",
     "Image":{
         "Name":"601340144943.dkr.ecr.ap-northeast-2.amazonaws.com/sample-api-server",
-        "Update": "true"
+        "Update": "false"
     },
-
     "Ports":[
         {
-            "ContainerPort":3000,
+            "ContainerPort":80,
             "HostPort":80
         }
-    ]
+    ],
+    "Logging": "/var/log/nestjs",
+    "Entrypoint": "yarn run start"
 }
