@@ -11,5 +11,5 @@
         }
     ],
     "Logging": "/var/log/nestjs",
-    "Entrypoint": "yarn run start"
+    "Entrypoint": "/app"
 }
