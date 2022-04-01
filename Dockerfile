@@ -12,5 +12,4 @@ WORKDIR /app
 COPY --from=builder /app ./
 ## application 실행
 ENTRYPOINT ["yarn", "run", "start"]
-# EXPOSE 80
-# EXPOSE 3000
+EXPOSE 3000
