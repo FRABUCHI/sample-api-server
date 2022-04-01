@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -12,7 +13,7 @@ export class AppController {
 
   @Get()
   getHeath(): string {
-    console.log("success health check");
+    Logger.debug('hello');
     return "HeathCheck";
   }
 }
