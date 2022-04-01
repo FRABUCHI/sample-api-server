@@ -12,6 +12,7 @@ export class AppController {
 
   @Get()
   getHeath(): string {
+    console.log("success health check");
     return "HeathCheck";
   }
 }
