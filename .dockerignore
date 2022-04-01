@@ -3,3 +3,4 @@ dist
 build.yaml
 deploy.yaml
 README.md
+.ebextensions/
