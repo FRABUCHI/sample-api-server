@@ -13,7 +13,7 @@ export class AppController {
 
   @Get()
   getHeath(): string {
-    Logger.debug('hello');
+    Logger.log('hello');
     return "HeathCheck";
   }
 }
