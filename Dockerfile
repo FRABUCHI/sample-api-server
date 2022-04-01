@@ -6,10 +6,10 @@ COPY . .
 RUN yarn install
 RUN yarn run build
 
-FROM 601340144943.dkr.ecr.ap-northeast-2.amazonaws.com/node
-WORKDIR /app
-## Step 1의 builder에서 build된 프로젝트를 가져온다
-COPY --from=builder /app ./
-## application 실행
+# FROM 601340144943.dkr.ecr.ap-northeast-2.amazonaws.com/node
+# WORKDIR /app
+# ## Step 1의 builder에서 build된 프로젝트를 가져온다
+# COPY --from=builder /app ./
+# ## application 실행
 ENTRYPOINT ["yarn", "run", "start"]
 EXPOSE 80
