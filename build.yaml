@@ -8,13 +8,9 @@ phases:
     commands:
       - echo "=================================================================[*] Login ECR================================================================="
       - aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME
-      # - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 601340144943.dkr.ecr.ap-northeast-2.amazonaws.com/sample-api-server
   build:
     commands:
       - echo "=================================================================[*] Build & Dockerizing================================================================="
       - docker build -t $PROJECT_NAME .
-      - docker tag $PROJECT_NAME $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME
-      - docker push $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME
-#   post_build:
-#     commands:
-#       - sh deploy.sh
+      - docker tag $PROJECT_NAME $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME:"$BRANCH_NAME"
+      - docker push $ECR_ACCOUNT.dkr.ecr.$ECR_REGION.amazonaws.com/$PROJECT_NAME:"$BRANCH_NAME"
